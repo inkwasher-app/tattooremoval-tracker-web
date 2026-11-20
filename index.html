@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Tattoo Removal Tracker — by INKWASHER</title>
+<meta name="description" content="Tattoo Removal Tracker for technicians: client libraries, session timelines, laser settings and progress photos, synced with the app.">
+<link rel="icon" type="image/png" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/app.css">
+<script src="assets/vendor/jszip.min.js" defer></script>
+<script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+<header class="app-header" id="app-header" hidden>
+  <div class="glow hero-glow"></div>
+  <div class="header-inner">
+    <img class="logo" src="assets/icon.png" alt="Tattoo Removal Tracker icon">
+    <div class="header-title">
+      <h1>Tattoo Removal Tracker</h1>
+      <div class="byline micro-label">by INKWASHER</div>
+    </div>
+    <nav class="header-nav">
+      <span class="sync-pill" id="sync-pill" title="Sync status">…</span>
+      <button class="btn btn-quiet btn-small" id="nav-clients" type="button">Clients</button>
+      <button class="btn btn-quiet btn-small" id="nav-settings" type="button">Settings</button>
+    </nav>
+  </div>
+</header>
+
+<main id="app" aria-live="polite"></main>
+
+<div class="sheet-backdrop" id="sheet-backdrop">
+  <div class="sheet" id="sheet" role="dialog" aria-modal="true"></div>
+</div>
+
+<div class="viewer" id="viewer">
+  <div class="viewer-stage" id="viewer-stage"></div>
+  <div class="viewer-bar" id="viewer-bar"></div>
+</div>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
